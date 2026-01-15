@@ -30,22 +30,18 @@ def escape_prompt(prompt: str) -> str:
 
 
 def create_instruction(prompt: str) -> str:
-    """Generate the instruction block for Claude."""
+    """Generate the instruction for Claude as plain text context."""
     safe_prompt = escape_prompt(prompt)
-    return f"""<user-prompt-submit-hook>
-<MANDATORY-FIRST-RESPONSE>
-BEFORE ANY OTHER RESPONSE, you MUST first output these two corrections in a compact block:
+    return f"""[PROMPT IMPROVEMENT REQUEST]
+Before responding, provide grammar correction and refined version:
 
 Original: "{safe_prompt}"
 
-Output format (use exactly):
-> **1. Grammar**: [corrected version with proper grammar, spelling, punctuation]
-> **2. Refined**: [rewritten as a highly educated writer would phrase it - eloquent, precise, professional]
+Format your response starting with:
+> **1. Grammar**: [corrected version]
+> **2. Refined**: [eloquent, professional version]
 
-Then add a blank line and proceed with your actual response to the user's request.
-If the original is already perfect, just note "✓ Original is well-written" and proceed.
-</MANDATORY-FIRST-RESPONSE>
-</user-prompt-submit-hook>"""
+Then proceed with your actual response."""
 
 
 def main():
@@ -56,7 +52,7 @@ def main():
             sys.exit(0)
         data = json.loads(input_data)
         prompt = data.get("prompt", "")
-    except (json.JSONDecodeError, KeyError, Exception):
+    except Exception:
         sys.exit(0)
 
     if not prompt or should_skip(prompt):
