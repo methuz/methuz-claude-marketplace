@@ -10,7 +10,7 @@
   "plugins": [
     {
       "name": "prompt-improver",
-      "source": ".",
+      "source": "./plugins/prompt-improver",
       "description": "Automatically provides grammar corrections and refined versions of your prompts"
     }
   ]
