@@ -1,0 +1,15 @@
+{
+  "name": "statusline",
+  "version": "1.0.0",
+  "description": "Enhanced Claude Code status line with model info, git status, context usage bar, and last message display",
+  "author": {
+    "name": "methuz"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/methuz/methuz-claude-marketplace",
+  "statusLine": {
+    "type": "command",
+    "command": "${CLAUDE_PLUGIN_ROOT}/statusline.sh",
+    "padding": 0
+  }
+}

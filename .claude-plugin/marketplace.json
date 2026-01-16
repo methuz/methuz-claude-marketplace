@@ -17,6 +17,17 @@
       },
       "source": "./plugins/prompt-improver",
       "category": "productivity"
+    },
+    {
+      "name": "statusline",
+      "description": "Enhanced status line with model info, git status, context usage bar, and last message display",
+      "version": "1.0.0",
+      "author": {
+        "name": "methuz",
+        "email": "methuz@users.noreply.github.com"
+      },
+      "source": "./plugins/statusline",
+      "category": "productivity"
     }
   ]
 }
