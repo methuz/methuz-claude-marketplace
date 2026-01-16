@@ -30,23 +30,23 @@ why this dont work good
 
 ```bash
 # Add the marketplace
-/plugin marketplace add methuz/claude-prompt-improver
+/plugin marketplace add methuz/claude-marketplace
 
 # Install the plugin
-/plugin install prompt-improver@prompt-improver-marketplace
+/plugin install prompt-improver@claude-marketplace
 ```
 
 ### Install from Local Path
 
 ```bash
 # Clone this repository
-git clone https://github.com/methuz/claude-prompt-improver.git
+git clone https://github.com/methuz/claude-marketplace.git
 
 # Add as local marketplace
 /plugin marketplace add ./claude-prompt-improver
 
 # Install the plugin
-/plugin install prompt-improver@prompt-improver-marketplace
+/plugin install prompt-improver@claude-marketplace
 ```
 
 ### Manual Installation
@@ -132,7 +132,7 @@ The plugin automatically skips:
 ## Uninstall
 
 ```bash
-/plugin uninstall prompt-improver@prompt-improver-marketplace
+/plugin uninstall prompt-improver@claude-marketplace
 ```
 
 Or manually remove the hook from `~/.claude/settings.json`.

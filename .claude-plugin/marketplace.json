@@ -1,11 +1,11 @@
 {
-  "name": "prompt-improver-marketplace",
+  "name": "claude-marketplace",
   "owner": {
     "name": "methuz",
     "email": "methuz@users.noreply.github.com"
   },
   "metadata": {
-    "description": "Plugins for improving Claude Code prompts and writing quality"
+    "description": "Collection of Claude Code plugins by methuz"
   },
   "plugins": [
     {
